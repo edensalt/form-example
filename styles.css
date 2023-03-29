@@ -1,3 +1,5 @@
+/* Document styles */
+
 * {
     box-sizing: border-box;
 }
@@ -36,16 +38,19 @@ body {
     margin: 0;
 }
 
-.head {
+/* Left side styles (image and logo) */
+
+.left {
     background: no-repeat url("images/castle.jpg");
     background-size: cover;
     height: 100vh;
-    width: 40%;
+    flex: 1 1 0;
+    width: 40vw;
     position: relative;
     text-align: center;
 }
 
-.head div {
+.left div {
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -85,22 +90,23 @@ a:hover {
     color: bisque;
 }
 
+/* Right side styles (introduction and form) */
+
 .main-content {
     font-family: 'titillium_websemibold', Arial, Helvetica, sans-serif;
-    height: 100vh;
-    width: 60%;
+    width: 60vw;
     background-color: rgb(255, 240, 223);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    overflow: auto;
+    overflow-y: auto;
+    max-height: 100vh;
 }
 
 .intro {
     margin-left: 40px;
     margin-right: 120px;
     margin-bottom: 20px;
-    overflow: auto;
+    margin-top: auto;
 }
 
 .form-input {
@@ -143,7 +149,7 @@ input[type="password"] {
     margin-bottom: 30px;
     font-family: 'titillium_webregular', Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 200px;
+    width: 210px;
     padding: 0 1px;
     border: 1px solid #E5E7EB;
     border-radius: 3px;
@@ -189,7 +195,7 @@ input[type="email"]:invalid+span.validation::after {
 input[id="pwd"]:invalid+span.validation::after {
     font-size: 0.7rem;
     position: absolute;
-    content: "Must have at least 8 characters, including 1 uppercase, 1 lowercase, 1 number and 1 symbol";
+    content: "Minimum of 8 characters, with 1 uppercase, 1 lowercase, 1 number and 1 symbol";
     color: rgba(0, 0, 0, 0.5);
     top: -30px;
     left: 0px;
@@ -247,8 +253,9 @@ button:active {
     transform: translateY(3px);
 }
 
-.user-action p {
+p.question {
     margin-left: 40px;
+    margin-bottom: 40px;
 }
 
 .login:hover {
