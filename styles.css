@@ -62,6 +62,10 @@ body {
     font-size: 1.5rem;
 }
 
+#castle-icon {
+    height: 4rem;
+}
+
 .photo-credit {
     color: white;
     position: absolute;
@@ -96,23 +100,81 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    margin: 20px;
+    margin-left: 40px;
+    margin-right: 120px;
+    margin-bottom: 10px;
 }
 
 .form-input {
     background-color: rgb(255, 255, 255);
     border-color: ivory;
-    box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
     width: 100%;
-    padding: 20px;
-    margin-top: 20px;
+    padding-left: 40px;
+    padding-right: 120px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
+.form-input div {
+    display: flex;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input label {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    font-family: 'titillium_webregular', Arial, Helvetica, sans-serif;
+}
+
+.form-input div div:nth-child(even) {
+    margin-left: 100px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    margin-bottom: 15px;
+    font-family: 'titillium_webregular', Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 200px;
+    padding: 0;
+}
+
+.subscription label,
+.subscription input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 button {
-    margin: 20px;
+    all: unset;
+    margin-left: 40px;
+    border-radius: 25px;
+    padding: 10px 40px;
+    color: white;
+    background-color: rgba(121, 143, 156, 1);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: rgb(146, 98, 93, 1);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: rgb(95, 64, 60);
 }
 
 .user-action p {
-    margin: 20px;
+    margin-left: 40px;
+}
+
+.login:hover {
+    color: rgba(121, 143, 156, 1);
 }
