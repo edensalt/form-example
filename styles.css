@@ -186,7 +186,7 @@ input[type="email"]:invalid+span.validation::after {
     left: 0px;
 }
 
-input[id="pwd"]+span.validation::after {
+input[id="pwd"]:invalid+span.validation::after {
     font-size: 0.7rem;
     position: absolute;
     content: "Must have at least 8 characters, including 1 uppercase, 1 lowercase, 1 number and 1 symbol";
