@@ -4,12 +4,31 @@
 
 @font-face {
     font-family: 'dm_serif_displayregular';
-    src: url('dmserifdisplay-regular-webfont.woff2') format('woff2'),
-         url('dmserifdisplay-regular-webfont.woff') format('woff');
+    src: url('fonts/dmserifdisplay-regular-webfont.woff2') format('woff2'),
+        url('fonts/dmserifdisplay-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'titillium_webregular';
+    src: url('fonts/titilliumweb-regular-webfont.woff2') format('woff2'),
+         url('fonts/titilliumweb-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'titillium_websemibold';
+    src: url('fonts/titilliumweb-semibold-webfont.woff2') format('woff2'),
+         url('fonts/titilliumweb-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 
 body {
     display: flex;
@@ -23,6 +42,7 @@ body {
     height: 100vh;
     width: 40%;
     position: relative;
+    text-align: center;
 }
 
 .head div {
@@ -48,6 +68,7 @@ body {
     width: 100%;
     bottom: 0rem;
     text-align: center;
+    font-family: 'titillium_webregular', Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -58,4 +79,40 @@ a {
 a:hover {
     cursor: pointer;
     color: bisque;
+}
+
+.main-content {
+    font-family: 'titillium_websemibold', Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 60%;
+    background-color: rgb(255, 240, 223);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin: 20px;
+}
+
+.form-input {
+    background-color: rgb(255, 255, 255);
+    border-color: ivory;
+    box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 20px;
+}
+
+.user-action p {
+    margin: 20px;
 }
