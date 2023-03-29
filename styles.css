@@ -14,7 +14,7 @@
 @font-face {
     font-family: 'titillium_webregular';
     src: url('fonts/titilliumweb-regular-webfont.woff2') format('woff2'),
-         url('fonts/titilliumweb-regular-webfont.woff') format('woff');
+        url('fonts/titilliumweb-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -23,7 +23,7 @@
 @font-face {
     font-family: 'titillium_websemibold';
     src: url('fonts/titilliumweb-semibold-webfont.woff2') format('woff2'),
-         url('fonts/titilliumweb-semibold-webfont.woff') format('woff');
+        url('fonts/titilliumweb-semibold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -93,16 +93,14 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
+    overflow: auto;
 }
 
 .intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
     margin-left: 40px;
     margin-right: 120px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    overflow: auto;
 }
 
 .form-input {
@@ -119,6 +117,7 @@ a:hover {
 
 .form-input div {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .input {
@@ -132,34 +131,110 @@ a:hover {
     font-family: 'titillium_webregular', Arial, Helvetica, sans-serif;
 }
 
-.form-input div div:nth-child(even) {
-    margin-left: 100px;
+.form-input div div:nth-child(odd) {
+    margin-right: 100px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    margin-bottom: 15px;
+    appearance: none;
+    position: relative;
+    margin-bottom: 30px;
     font-family: 'titillium_webregular', Arial, Helvetica, sans-serif;
     font-size: 100%;
     width: 200px;
-    padding: 0;
+    padding: 0 1px;
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgb(95, 64, 60, 0.5);
+}
+
+input+span {
+    position: relative;
+}
+
+input:invalid:required {
+    border-color: rgb(255, 0, 0, 0.5);
+}
+
+input:valid {
+    border: 1px solid rgb(34, 52, 38, 0.5);
+}
+
+input[type="text"]:invalid+span.validation::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: "Username must be 2-20 characters";
+    color: rgba(0, 0, 0, 0.5);
+    top: -30px;
+    left: 0px;
+}
+
+input[type="email"]:invalid+span.validation::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: "Email must be in example@email.com";
+    color: rgba(0, 0, 0, 0.5);
+    top: -30px;
+    left: 0px;
+}
+
+input[id="pwd"]+span.validation::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: "Must have at least 8 characters, including 1 uppercase, 1 lowercase, 1 number and 1 symbol";
+    color: rgba(0, 0, 0, 0.5);
+    top: -30px;
+    left: 0px;
 }
 
 .subscription label,
 .subscription input {
-    margin-top: 10px;
+    appearance: none;
+    margin-top: 30px;
     margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    margin-top: 33px;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #E5E7EB;
+    vertical-align: -2px;
+    color: rgba(121, 143, 156, 1);
+    cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+    content: "\2713";
+    position: absolute;
+    font-size: 1.2em;
+    right: -1px;
+    top: -0.3em;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+    visibility: visible;
 }
 
 button {
     all: unset;
-    margin-left: 40px;
+    margin: 20px 0px 20px 40px;
     border-radius: 25px;
     padding: 10px 40px;
     color: white;
     background-color: rgba(121, 143, 156, 1);
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
 }
 
 button:hover {
@@ -169,6 +244,7 @@ button:hover {
 
 button:active {
     background-color: rgb(95, 64, 60);
+    transform: translateY(3px);
 }
 
 .user-action p {

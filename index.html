@@ -17,12 +17,13 @@
         </div>
         <div class="photo-credit">
             <p>Background photo by <a href="https://unsplash.com/@jonnysplsh">Jonny Caspari</a> on <a
-                    href="https://unsplash.com/photos/A7ol2HfnycY">Unsplash</a><br>Castle icons created by <a href="https://www.flaticon.com/free-icons/castle" title="castle icons">kerismaker - Flaticon</a></p>
+                    href="https://unsplash.com/photos/A7ol2HfnycY">Unsplash</a><br>Castle icons created by <a
+                    href="https://www.flaticon.com/free-icons/castle" title="castle icons">kerismaker - Flaticon</a></p>
         </div>
     </div>
     <div class="main-content">
         <div class="intro">
-            <h2>This is not a real online service (yet)! This is a placeholder sign-up page for what will be the most
+            <h2>This is not a real sign-up sheet (yet)! This is a placeholder sign-up page for what will be the most
                 functional score-keeping app of all time. Board-gamers and data-nerds rejoice: The Keep is almost here!
             </h2>
             <h2>Sign up now and let the games begin...</h2>
@@ -33,28 +34,34 @@
                     <h2>Let's do this!</h2>
                     <div class="user-line">
                         <div class="username input">
-                            <label for="user_name">Username</label>
-                            <input type="text" id="user_name" name="user_name">
+                            <label for="user_name">Username<span aria-label="required">*</span></label>
+                            <input type="text" id="user_name" name="user_name" required pattern="^[a-zA-Z0-9_-]+$"
+                                minlength="2" maxlength="20">
+                            <span class="validation"></span>
                         </div>
                         <div class="email input">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email">
+                            <label for="email">Email<span aria-label="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="validation"></span>
                         </div>
                     </div>
                     <div class="pwd-line">
                         <div class="pwd input">
-                            <label for="pwd">Password</label>
-                            <input type="password" id="pwd" name="password">
+                            <label for="pwd">Password<span aria-label="required">*</span></label>
+                            <input type="password" id="pwd" name="password" required
+                                pattern="/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^\w\d\s:])/">
+                            <span class="validation"></span>
                         </div>
                         <div class="confirm-pwd input">
-                            <label for="confirm-pwd">Confirm password</label>
-                            <input type="password" id="confirm-pwd">
+                            <label for="confirm-pwd">Confirm password<span aria-label="required">*</span></label>
+                            <input type="password" id="confirm-pwd" required
+                                pattern="/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^\w\d\s:])/" minlength="8">
+                            <span class="validation"></span>
                         </div>
                     </div>
                     <div class="subscription">
-                        <input type="checkbox" id="subscription" name="subscription" value="subscribed" checked>
-                        <label for="subscription">Check this box if you'd like to receive email updates about The
-                            Keep.</label>
+                        <input type="checkbox" id="subscription" name="subscription" value="yes" checked>
+                        <label for="subscription">I'd like to receive email updates about The Keep.</label>
                     </div>
                 </div>
                 <button type="submit">Create account</button>
@@ -63,5 +70,6 @@
         </div>
     </div>
 </body>
+
 
 </html>
