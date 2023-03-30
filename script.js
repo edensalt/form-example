@@ -10,10 +10,7 @@ submitButton.addEventListener('click', (e) => {
 
         // Define password values
         const pwd1 = document.getElementById('pwd').value;
-        console.log(pwd1);
-
         const pwd2 = document.getElementById('confirm-pwd').value;
-        console.log(pwd2);
 
         // Remove error messages if they exist and the new input is valid
 
@@ -23,6 +20,8 @@ submitButton.addEventListener('click', (e) => {
                 existingErrorMessage.remove(); // remove the existing error message
             }
         }
+
+        // Check validation of inputs or if passwords match
 
         else if (!input.checkValidity() || pwd1 !== pwd2) {
             // If the input is not valid, add the error class to the input field
