@@ -167,14 +167,14 @@ input+span {
     position: relative;
 }
 
-input:invalid:required {
+.error {
     border-color: rgb(255, 0, 0, 0.5);
 }
 
 input:valid {
     border: 1px solid rgb(34, 52, 38, 0.5);
 }
-
+/* 
 input[type="text"]:invalid+span.validation::after {
     font-size: 0.7rem;
     position: absolute;
@@ -182,25 +182,25 @@ input[type="text"]:invalid+span.validation::after {
     color: rgba(0, 0, 0, 0.5);
     top: -30px;
     left: 0px;
-}
+} */
 
-input[type="email"]:invalid+span.validation::after {
+/* input[type="email"]:invalid+span.validation::after {
     font-size: 0.7rem;
     position: absolute;
     content: "Email must be in example@email.com";
     color: rgba(0, 0, 0, 0.5);
     top: -30px;
     left: 0px;
-}
+} */
 
-input[id="pwd"]:invalid+span.validation::after {
+/* input[id="pwd"]:invalid+span.validation::after {
     font-size: 0.7rem;
     position: absolute;
     content: "Minimum of 8 characters, with 1 uppercase, 1 lowercase, 1 number and 1 symbol";
     color: rgba(0, 0, 0, 0.5);
     top: -30px;
     left: 0px;
-}
+} */
 
 .subscription label,
 .subscription input {
