@@ -8,6 +8,13 @@ submitButton.addEventListener('click', (e) => {
     // Loop through each input field and check if it's valid
     inputFields.forEach((input) => {
 
+        // Define password values
+        const pwd1 = document.getElementById('pwd').value;
+        console.log(pwd1);
+
+        const pwd2 = document.getElementById('confirm-pwd').value;
+        console.log(pwd2);
+
         // Remove error messages if they exist and the new input is valid
 
         if (input.checkValidity()) {
@@ -17,7 +24,7 @@ submitButton.addEventListener('click', (e) => {
             }
         }
 
-        else if (!input.checkValidity()) {
+        else if (!input.checkValidity() || pwd1 !== pwd2) {
             // If the input is not valid, add the error class to the input field
             input.classList.add('error');
             // Display a message explaining the error
@@ -45,6 +52,7 @@ submitButton.addEventListener('click', (e) => {
             e.preventDefault();
         }
     });
+
 });
 
 console.log('hi');

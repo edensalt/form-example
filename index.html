@@ -52,8 +52,8 @@
                     </div>
                     <div class="confirm-pwd input">
                         <label for="confirm-pwd">Confirm password<span aria-label="required">*</span></label>
-                        <input type="password" id="confirm-pwd" required
-                            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" minlength="8>
+                        <input type="password" id="confirm-pwd" name="confirm-password" required
+                            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" minlength="8" oninvalid="setCustomValidity('Password does not match')" onchange="setCustomValidity('')">
                             <span class=" validation"></span>
                     </div>
                 </div>
