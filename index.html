@@ -35,8 +35,7 @@
                     <div class="username input">
                         <label for="user_name">Username<span aria-label="required">*</span></label>
                         <input type="text" id="user_name" name="user_name" required pattern="^[a-zA-Z0-9_-]+$"
-                            minlength="2" maxlength="20">
-                        <span class="validation"></span>
+                            minlength="2" maxlength="20" oninvalid="setCustomValidity('Usernames must be 2-20 characters long and use only letters, numbers, &quot;-&quot; and &quot_&quot.')" onchange="setCustomValidity('')">
                     </div>
                     <div class="email input">
                         <label for="email">Email<span aria-label="required">*</span></label>

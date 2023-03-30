@@ -142,9 +142,7 @@ a:hover {
     margin-right: 100px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+input {
     appearance: none;
     position: relative;
     margin-bottom: 30px;
@@ -156,9 +154,7 @@ input[type="password"] {
     border-radius: 3px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
+input:focus {
     background: rgba(0, 0, 0, 0.03);
     border: 1px solid rgb(95, 64, 60, 0.5);
 }
@@ -174,6 +170,7 @@ input+span {
 input:valid {
     border: 1px solid rgb(34, 52, 38, 0.5);
 }
+
 /* 
 input[type="text"]:invalid+span.validation::after {
     font-size: 0.7rem;
