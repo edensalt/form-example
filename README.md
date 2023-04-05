@@ -1,5 +1,5 @@
-# Project: <a href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form">Sign-Up Form</a>
-Example sign-up form for the Odin Project: Intermediate HTML and CSS course
+# Project: <a href="https://edensalt.github.io/sign-up-form/">Sign-Up Form</a>
+Example sign-up form for the <a href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form">Odin Project: Intermediate HTML and CSS course</a>
 
 ## Skills demonstrated
 
