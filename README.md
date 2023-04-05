@@ -9,7 +9,7 @@ Example sign-up form for the Odin Project: Intermediate HTML and CSS course
 - Font imports
 - Flexbox
 
-## Image credit
+### Image credits
 
-Image by Jonny Caspari on Unsplash (https://unsplash.com/photos/A7ol2HfnycY)
-Icon by kerismaker on Flaticon (https://www.flaticon.com/free-icons/castle)
+- Image by Jonny Caspari on Unsplash (https://unsplash.com/photos/A7ol2HfnycY)
+- Icon by kerismaker on Flaticon (https://www.flaticon.com/free-icons/castle)
